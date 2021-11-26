@@ -1,0 +1,122 @@
+#app {
+  // Combined with #content-wrapper, limits the width of the page and centers it
+  display: grid;
+  justify-content: center;
+}
+
+#content-wrapper {
+  // Width is 100% of viewport in CSS, but restricted to Bootstrap breakpoints.
+  width: 100vw;
+  // Min-height 100vh combined with the grid-template-rows keeps the footer at the bottom of the page
+  min-height: 100vh;
+  // This is a grid where CSS takes care of the rows, and Bootstrap takes care of the columns.
+  display: grid;
+  // Row-gap and padding at horizontal dividers between sections
+  row-gap: .25rem;
+  padding: 0;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "header"
+                       "nav"
+                       "content"
+                       "footer"
+}
+
+// Definitions of grid-areas within the template above.
+Header {grid-area: header;}
+Nav {grid-area: nav;}
+router-view {grid-area: content;}
+Footer {grid-area: footer;}
+
+// The follow code gets my PDF's to load responsively with reasonable aspect ratios on a variety of screens
+
+@media only screen and (max-width: 991px) {#song-main {padding-bottom: 150%; background-color: white;}}
+@media only screen and (min-width: 992px) {#song-main {padding-bottom: 103%;}}
+@media only screen and (min-width: 1200px) {#song-main {padding-bottom: 100%;}}
+@media only screen and (min-width: 1400px) {#song-main {padding-bottom: 90%;}}
+
+
+#app {
+  background-color: black;
+}
+
+#song-main {
+  position: relative;
+  float: left;
+  height: 0;
+  margin-bottom: 2rem;
+}
+
+#pdf-viewer {
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  left: 0;
+}
+
+// This works with JS to make the "links" to each piece of sheet music
+.song-button {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+
+// Glossary Page alignment.
+#glossary-main, #glossary-aside {
+  padding-top: 2rem;
+}
+
+
+
+.glossary-card {
+  margin-bottom: 2rem;
+}
+
+// This make the div containing the img responsive to the width of the screen...
+.glossary-image-container {
+  width: 10%;
+  margin: 1rem auto 1rem auto;
+}
+
+// ...and Bootstrap img-fluid makes the image itself responsive to the size of the div.
+.glossary-card img {
+  width: 100%;
+  height: 100%;
+}
+
+
+// Home Page
+
+.news-card {
+  height: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+
+}
+
+.news-card-image {
+  height: auto;
+  padding: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.news-card-text h3 {
+  margin-top: 1rem;
+}
+
+main {
+  max-width: 100vw;
+  padding: 1.5rem;
+}
+
+// Discovery Page.  This is just a placeholder for the eventual API component, but with some random responsive divs to demonstrate my understanding of Bootstrap grid, because I don't think I used 3 breakpoints anywhere else on the site.
+
+#bootstrap-grid-demo {
+  width: 100%;
+  div {
+    height: 10rem;
+  }
+}
