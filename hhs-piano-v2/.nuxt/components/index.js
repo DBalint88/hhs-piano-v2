@@ -1,0 +1,39 @@
+export { default as DiscoverCard } from '../..\\components\\DiscoverCard.vue'
+export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as GlossaryCard } from '../..\\components\\GlossaryCard.vue'
+export { default as Header } from '../..\\components\\Header.vue'
+export { default as Nav } from '../..\\components\\Nav.vue'
+export { default as NewsStory } from '../..\\components\\NewsStory.vue'
+export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
+export { default as SongList } from '../..\\components\\SongList.vue'
+
+// nuxt/nuxt.js#8607
+function wrapFunctional(options) {
+  if (!options || !options.functional) {
+    return options
+  }
+
+  const propKeys = Array.isArray(options.props) ? options.props : Object.keys(options.props || {})
+
+  return {
+    render(h) {
+      const attrs = {}
+      const props = {}
+
+      for (const key in this.$attrs) {
+        if (propKeys.includes(key)) {
+          props[key] = this.$attrs[key]
+        } else {
+          attrs[key] = this.$attrs[key]
+        }
+      }
+
+      return h(options, {
+        on: this.$listeners,
+        attrs,
+        props,
+        scopedSlots: this.$scopedSlots,
+      }, this.$slots.default)
+    }
+  }
+}

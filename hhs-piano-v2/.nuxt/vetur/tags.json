@@ -1,0 +1,26 @@
+{
+  "DiscoverCard": {
+    "description": "Auto imported from components/DiscoverCard.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "GlossaryCard": {
+    "description": "Auto imported from components/GlossaryCard.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "Nav": {
+    "description": "Auto imported from components/Nav.vue"
+  },
+  "NewsStory": {
+    "description": "Auto imported from components/NewsStory.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "SongList": {
+    "description": "Auto imported from components/SongList.vue"
+  }
+}

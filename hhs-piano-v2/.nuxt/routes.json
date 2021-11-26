@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Discover",
+    "path": "/Discover",
+    "component": "C:\\\\Users\\\\DBali\\\\documents\\\\hhs-piano-v2\\\\hhs-piano-v2\\\\pages\\\\Discover.vue",
+    "chunkName": "pages/Discover",
+    "_name": "_0ea28f04"
+  },
+  {
+    "name": "Glossary",
+    "path": "/Glossary",
+    "component": "C:\\\\Users\\\\DBali\\\\documents\\\\hhs-piano-v2\\\\hhs-piano-v2\\\\pages\\\\Glossary.vue",
+    "chunkName": "pages/Glossary",
+    "_name": "_be732f9a"
+  },
+  {
+    "name": "Songs",
+    "path": "/Songs",
+    "component": "C:\\\\Users\\\\DBali\\\\documents\\\\hhs-piano-v2\\\\hhs-piano-v2\\\\pages\\\\Songs.vue",
+    "chunkName": "pages/Songs",
+    "_name": "_4a6fe039"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\DBali\\\\documents\\\\hhs-piano-v2\\\\hhs-piano-v2\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_e7629da6"
+  }
+]
