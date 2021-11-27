@@ -46,7 +46,7 @@ export default {
   methods: {
     callAPI() {
       axios
-        .get('https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=' + this.input + '&type=music&info=1&limit=10&k=420205-DanielBa-UVUVOXKE')
+        .get('https://tastedive.com/api/similar?q=' + this.input + '&type=music&info=1&limit=10&k=420205-DanielBa-UVUVOXKE/')
         .then(response => (this.suggestions = response.data))
         .catch(error => {
           console.error(error)
