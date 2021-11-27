@@ -53,6 +53,7 @@ export default {
           this.errored = true
         })
         .finally(() => this.loading = false)
+      this.input = '';
     }
   }
 };
