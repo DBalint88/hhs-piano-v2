@@ -47,6 +47,9 @@ export default {
     callAPI() {
       axios
         .get('https://tastedive.com/api/similar?q=' + this.input + '&type=music&info=1&limit=10&k=420205-DanielBa-UVUVOXKE/')
+        headers: {
+          axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
+        }
         .then(response => (this.suggestions = response.data))
         .catch(error => {
           console.error(error)
