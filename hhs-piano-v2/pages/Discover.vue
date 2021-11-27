@@ -31,11 +31,25 @@ import axios from 'axios'
 import DiscoverCard from "@/components/DiscoverCard.vue"
 export default {
   name: "Discover",
+  head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Discover New Music based on your favorite artists'
+          }
+        ]
+      }
+    },
   components: {
     DiscoverCard
   },
   data() {
     return {
+      title: 'Discover - HHS Piano',
       suggestions: null,
       loading: true,
       errored: false,

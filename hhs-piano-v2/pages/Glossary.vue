@@ -27,6 +27,19 @@ import GlossaryCard from "@/components/GlossaryCard.vue";
 
 export default {
   name: "Glossary",
+  head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Glossary of musical notation vocabulary'
+          }
+        ]
+      }
+    },
   components: {
     GlossaryCard
   },
@@ -40,6 +53,7 @@ export default {
   },
   data() {
       return {
+        title: 'Glossary - HHS Piano',
         terms: [
           {
             name: 'Eighth Note',

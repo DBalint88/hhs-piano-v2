@@ -12,10 +12,28 @@ import NewsStory from "@/components/NewsStory.vue";
 
 export default {
   name: "Home",
+  head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'news and events at Hamden High School'
+          }
+        ]
+      }
+    },
   components: {
     NewsStory
   },
-};
+  data() {
+      return {
+        title: 'Home - HHS Piano'
+      }
+    }
+  }
 </script>
 
 <style lang="scss">

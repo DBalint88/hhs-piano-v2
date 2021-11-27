@@ -31,8 +31,22 @@ import SongList from "@/components/SongList.vue";
 
 export default {
   name: "Songs",
+  head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'graduated curriculum of piano sheet music lessons'
+          }
+        ]
+      }
+    },
   data() {
     return {
+      title: "Songs - HHS Piano",
       selectedSongSheet: "",
       selectedSongVideo: ""
     }
